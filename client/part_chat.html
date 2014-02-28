@@ -1,0 +1,23 @@
+
+<h1>Chat</h1>
+<div ng-show="loading">
+    loading ...
+</div>
+
+<div ng-show="!loading">
+    loading finished.
+    <h1>hello {{name}}</h1>
+
+    <p>system time: {{systemtime}}</p>
+
+    <p>are you ready?</p>
+    <button ng-click="setReady()">yeah!</button>
+    <br>
+    <br>
+    <input type="text" ng-model="message"/>
+    <button ng-click="sendMessage()">send</button>
+    <br>
+    <ul>
+        <li ng-repeat="ready in readys track by $index">{{ready}}</li>
+    </ul>
+</div>
